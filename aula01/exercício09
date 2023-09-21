@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class exercise09 {
 
     /**
-     * Exercício 08:
+     * Exercício 09:
      * Crie um programa em Java que peça ao usuário para inserir seu ano de nascimento
      * e, em seguida, calcule e exiba a idade.
      */
@@ -14,7 +14,7 @@ public class exercise09 {
 
         System.out.println("Digite o seu ano de nascimento:");
         int birthYear = scanner.nextInt();
-
+        
         int year = LocalDateTime.now().getYear();
 
         int idade = year - birthYear;
