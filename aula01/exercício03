@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class exercise03 {
+
+    /**2
+     * Exercicio 03:
+     * Crie um programa que leia 3 números, imprima o maior, o menor e a média aritmética.
+     */
+
+    public static void main(String[] args) {
+
+        double firstNumber, secondNumber, thirdNumber, maxValue, minValue, arithmeticMean;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o primeiro numero: ");
+        firstNumber = scanner.nextDouble();
+
+        System.out.println("Digite o segundo numero: ");
+        secondNumber = scanner.nextDouble();
+
+        System.out.println("Digite o terceiro numero: ");
+        thirdNumber = scanner.nextDouble();
+
+        if (firstNumber > secondNumber) {
+            if (firstNumber > thirdNumber) {
+                maxValue = firstNumber;
+            } else {
+                maxValue = thirdNumber;
+            }
+        } else {
+            if (secondNumber > thirdNumber) {
+                maxValue = secondNumber;
+            } else {
+                maxValue = thirdNumber;
+            }
+        }
+        if (firstNumber < secondNumber) {
+            if (firstNumber < thirdNumber) {
+                minValue = firstNumber;
+            } else {
+                minValue = thirdNumber;
+            }
+        } else {
+            if (secondNumber < thirdNumber) {
+                minValue = secondNumber;
+            } else {
+                minValue = thirdNumber;
+            }
+        }
+        arithmeticMean = (firstNumber + secondNumber + thirdNumber) / 3.0;
+
+        System.out.println("O maior número é: " + maxValue);
+        System.out.println("O menor número é: " + minValue);
+        System.out.println("A média aritmética é: " + arithmeticMean);
+
+        scanner.close();
+    }
+}
