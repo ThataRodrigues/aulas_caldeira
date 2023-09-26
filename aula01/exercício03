@@ -9,50 +9,50 @@ public class exercise03 {
 
     public static void main(String[] args) {
 
-        double firstNumber, secondNumber, thirdNumber, maxValue, minValue, arithmeticMean;
+        double primeiroNumero, segundoNumero, terceiroNumero, maxValor, minValor, mediaAritmetica;
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite o primeiro numero: ");
-        firstNumber = scanner.nextDouble();
+        System.out.println("Digite o primeiro número: ");
+        primeiroNumero = scanner.nextDouble();
 
-        System.out.println("Digite o segundo numero: ");
-        secondNumber = scanner.nextDouble();
+        System.out.println("Digite o segundo número: ");
+        segundoNumero = scanner.nextDouble();
 
-        System.out.println("Digite o terceiro numero: ");
-        thirdNumber = scanner.nextDouble();
+        System.out.println("Digite o terceiro número: ");
+        terceiroNumero = scanner.nextDouble();
 
-        if (firstNumber > secondNumber) {
-            if (firstNumber > thirdNumber) {
-                maxValue = firstNumber;
+        if (primeiroNumero > segundoNumero) {
+            if (primeiroNumero > terceiroNumero) {
+                maxValor = primeiroNumero;
             } else {
-                maxValue = thirdNumber;
+                maxValor = terceiroNumero;
             }
         } else {
-            if (secondNumber > thirdNumber) {
-                maxValue = secondNumber;
+            if (segundoNumero > terceiroNumero) {
+                maxValor = segundoNumero;
             } else {
-                maxValue = thirdNumber;
+                maxValor = terceiroNumero;
             }
         }
-        if (firstNumber < secondNumber) {
-            if (firstNumber < thirdNumber) {
-                minValue = firstNumber;
+        if (primeiroNumero < segundoNumero) {
+            if (primeiroNumero < terceiroNumero) {
+                minValor = primeiroNumero;
             } else {
-                minValue = thirdNumber;
+                minValor = terceiroNumero;
             }
         } else {
-            if (secondNumber < thirdNumber) {
-                minValue = secondNumber;
+            if (segundoNumero < terceiroNumero) {
+                minValor = segundoNumero;
             } else {
-                minValue = thirdNumber;
+                minValor = terceiroNumero;
             }
         }
-        arithmeticMean = (firstNumber + secondNumber + thirdNumber) / 3.0;
+        mediaAritmetica = (primeiroNumero + segundoNumero + terceiroNumero) / 3.0;
 
-        System.out.println("O maior número é: " + maxValue);
-        System.out.println("O menor número é: " + minValue);
-        System.out.println("A média aritmética é: " + arithmeticMean);
+        System.out.println("O maior número é: " + maxValor);
+        System.out.println("O menor número é: " + minValor);
+        System.out.println("A média aritmética é: " + mediaAritmetica);
 
         scanner.close();
     }
