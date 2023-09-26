@@ -9,20 +9,20 @@ public class exercise02 {
 
     public static void main(String[] args) {
 
-        double firstNumber;
-        double secondNumber;
+        double primeiroNumero;
+        double segundoNumero;
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite o primeiro numero: ");
+        System.out.println("Digite o primeiro número: ");
 
-        firstNumber = scanner.nextDouble();
+        primeiroNumero = scanner.nextDouble();
 
-        System.out.println("Digite o segundo numero: ");
-        secondNumber = scanner.nextDouble();
+        System.out.println("Digite o segundo número: ");
+        segundoNumero = scanner.nextDouble();
 
-        System.out.println("Primeiro numero: " + firstNumber);
-        System.out.println("Segundo numero: " + secondNumber);
+        System.out.println("Primeiro número é: " + primeiroNumero);
+        System.out.println("Segundo número é: " + segundoNumero);
 
         scanner.close();
     }
