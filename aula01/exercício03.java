@@ -1,11 +1,5 @@
 import java.util.Scanner;
-
-public class exercise03 {
-
-    /**2
-     * Exercicio 03:
-     * Crie um programa que leia 3 números, imprima o maior, o menor e a média aritmética.
-     */
+public class exercicio03 {
 
     public static void main(String[] args) {
 
@@ -48,6 +42,7 @@ public class exercise03 {
                 minValor = terceiroNumero;
             }
         }
+
         mediaAritmetica = (primeiroNumero + segundoNumero + terceiroNumero) / 3.0;
 
         System.out.println("O maior número é: " + maxValor);
