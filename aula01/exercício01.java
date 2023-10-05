@@ -1,19 +1,14 @@
 import java.util.Scanner;
 
-public class exercise01 {
+public class exercicio01{
 
-    /**
-     * Exercicio 01:
-     * Crie um programa que leia seu nome e imprima na tela.
-     */
+    public static void main(String[]args){
 
-    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite o seu nome: ");
-
-        String name = scanner.nextLine();
-        System.out.println("O nome digitado é: " + name);
+        System.out.println("Digite seu nome: ");
+        String nome = scanner.nextLine();
+        System.out.println("O nome digitado é: "+nome);
 
         scanner.close();
     }
