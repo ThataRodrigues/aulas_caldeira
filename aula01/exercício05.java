@@ -1,39 +1,31 @@
 import java.util.Scanner;
 
-public class exercise05 {
+public class exercicio05{
 
-    /**
-     * Exercicio 05:
-     * Crie um programa que armazene um horário (hora, minuto e segundo) em variáveis, depois,
-     * determine e exiba a quantidade de segundos que se passaram desde as 0h00min0s e
-     * a quantidade de segundos que faltam para a meia-noite.
-     */
+    public static void main(String[] args){
 
-    public static void main(String[] args) {
-
-        int hour, minute, second;
+        int hora, minutos, segundos;
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite a hora [0-23]: ");
+        System.out.println("Digite a hora: ");
+        hora = scanner.nextInt();
 
-        hour = scanner.nextInt();
+        System.out.println("Digite os minutos: ");
+        minutos = scanner.nextInt();
 
-        System.out.println("Digite os minutos [0-59]: ");
-        minute = scanner.nextInt();
+        System.out.println("Digite os segundos: ");
+        segundos = scanner.nextInt();
 
-        System.out.println("Digite os segundos [0-59]: ");
-        second = scanner.nextInt();
+        if(hora >= 0 && hora <=23 && minutos >= 0 && minutos <= 59 && segundos >= 0 && segundos <= 59){
 
-        if (hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59 && second >= 0 && second <= 59) {
+            int segundosQuePassou = hora * 3600 + minutos * 60 + segundos;
+            int segundosQueFaltam = 86400 - segundosQuePassou;
 
-            int secondsHavePassed = hour * 3600 + minute * 60 + second;
-            int secondsLeft = 86400 - secondsHavePassed;
-
-            System.out.println("Segundos passados desde 0h00min00s: " + secondsHavePassed);
-            System.out.println("Segundos faltando para meia-noite: " + secondsLeft);
-        } else {
-            System.out.println("Entrada de tempo inválida.");
+            System.out.println("Segundos que passou após a meia-noite: " + segundosQuePassou);
+            System.out.println("Segundos que faltam para meia-noite: "+ segundosQueFaltam);
+        }else{
+            System.out.println("ERRO!! Tempo inválido.");
         }
         scanner.close();
     }
