@@ -1,28 +1,21 @@
 import java.util.Scanner;
 
-public class exercise04 {
+public class exercicio04 {
 
-    /**
-     * Exercicio 04:
-     * Crie um programa que leia o valor do salário mínimo e o valor do salário de um usuário,
-     * calcule a quantidade de salários mínimos que esse usuário ganha e imprima o resultado,
-     * assuma que o salário mínimo é R$1.320.
-     */
+    public static void main(String[] args){
 
-    public static void main(String[] args) {
-        double minimumWage = 1320.0;
+        double salarioMinimo = 1320.0;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o valor do salário:");
-        double wage = scanner.nextDouble();
 
-        double quantity = wage / minimumWage;
+        System.out.println("Digite o valor do salário: ");
+        double salario = scanner.nextDouble();
 
-        String formattedResult = String.format("%.2f", quantity);
-        System.out.println("O usuário ganha " + formattedResult + " salários mínimos.");
+        double quantidade = salario / salarioMinimo;
 
-        System.out.printf("O usuário ganha %.2f salários mínimos.", quantity);
+        System.out.printf("Esse valor corresponde a %.2f salários mínimos.", quantidade);
 
         scanner.close();
     }
+
 }
