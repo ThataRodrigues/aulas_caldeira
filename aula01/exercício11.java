@@ -1,31 +1,25 @@
 import java.util.Scanner;
 
-public class exercise11 {
+public class exercicio11{
 
-    /**
-     * Exercicio 11:
-     * Peça ao usuário que digite uma palavra ou frase e conte quantas vogais
-     * (a, e, i, o, u) estão presentes. Exiba o número de vogais na tela.
-     */
+        public static void main( String[]args){
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite uma palavra ou frase:");
+            System.out.println("Digite uma palavra ou uma frase: ");
 
-        String entrada = scanner.nextLine().toLowerCase();
+            String entrada = scanner.nextLine().toLowerCase();
+            int contadorVogais = 0;
 
-        int vowelCounter = 0;
+            for( int i = 0; i < entrada.length(); i++){
 
-        for (int i = 0; i < entrada.length(); i++) {
-            char letter = entrada.charAt(i);
-            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
-                vowelCounter++;
+                char letra = entrada.charAt(i);
+                if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+                    contadorVogais++;
+                }
             }
+            System.out.println("O número de vogais na palavra ou frase é: "+ contadorVogais);
+
+            scanner.close();
         }
-
-        System.out.println("O número de vogais na palavra ou frase é: " + vowelCounter);
-
-        scanner.close();
-    }
 }
